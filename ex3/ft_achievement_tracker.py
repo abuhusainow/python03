@@ -23,7 +23,7 @@ def gen_player_achievements() -> set:
     return set(rdm.sample(ACHIEVEMENTS, k=rdm.randrange(1, len(ACHIEVEMENTS))))
 
 
-if __name__ == "__main__":
+def main_function() -> None:
     players = ["Alice", "Bob", "Charlie", "Dylan"]
     p_achiev = [gen_player_achievements() for _ in players]
     print("=== Achievement Tracker System ===", end="\n\n")
@@ -42,3 +42,7 @@ if __name__ == "__main__":
     for i in range(len(players)):
         print(f"{players[i]} is missing:",
               f"{p_achiev[i].union(*p_achiev).difference(p_achiev[i])}")
+
+
+if __name__ == "__main__":
+    main_function()
