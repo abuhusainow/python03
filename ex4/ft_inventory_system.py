@@ -7,13 +7,13 @@ def ft_inventory_system(sys_input: list[str]) -> dict:
         try:
             key, value, *_ = [var.strip() for var in item.split(":")]
         except ValueError:
-            print(f"Error - invalid parameter '{key}'")
+            print(f"Error - invalid parameter '{item}'")
             continue
         if key not in inventory.keys():
             try:
                 inventory[key] = int(value)
             except ValueError as e:
-                print(f"Quantity error for 'key': '{e}'")
+                print(f"Quantity error for '{key}': {e}")
             continue
         else:
             print(f"Redundant item '{key}' - discarding")
@@ -22,7 +22,7 @@ def ft_inventory_system(sys_input: list[str]) -> dict:
 
 def update_intory(inventory: dict[str, int], item: str, qty: int) -> None:
     inventory.update({item: qty})
-    print(f"Updated inventory: {list(inventory)}")
+    print(f"Updated inventory: {inventory}")
 
 
 if __name__ == "__main__":
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         f"with quantity {most_qty}"
     )
     print(
-        f"Item most abundant: {least_item}",
+        f"Item least abundant: {least_item}",
         f"with quantity {least_qty}"
     )
     update_intory(inv_dict, "magic_item", 1)
