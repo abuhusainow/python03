@@ -36,15 +36,16 @@ if __name__ == "__main__":
         f"{sum_val}"
     )
 
-    for key, val in inv_dict.items():
-        print(f"Item {key} represents {(val/sum_val):.1%}")
+    for item in inv_dict.keys():
+        print(f"Item {item} represents {(inv_dict[item]/sum_val):.1%}")
 
     most_item = ""
     most_qty = 0
     least_item = ""
     least_qty = 0
 
-    for item, qty in inv_dict.items():
+    for item in inv_dict.keys():
+        qty = inv_dict[item]
         if most_item == "" or qty > most_qty:
             most_item = item
             most_qty = qty
