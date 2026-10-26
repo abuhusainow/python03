@@ -1,7 +1,7 @@
 import sys
 
 
-def ft_inventory_system(sys_input: list[str]) -> dict:
+def ft_inventory_system(sys_input: list[str]) -> dict[str, int]:
     inventory: dict[str, int] = {}
     for item in sys_input[1:]:
         try:

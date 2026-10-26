@@ -1,7 +1,7 @@
 import random as rdm
 
 
-def gen_player_achievements() -> set:
+def gen_player_achievements() -> set[str]:
 
     ACHIEVEMENTS = [
         "Boss Slayer",

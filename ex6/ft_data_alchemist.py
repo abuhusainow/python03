@@ -1,13 +1,14 @@
 import random
 
-names = ['Alice', 'bob', 'Charlie', 'dylan', 'Emma', 'Gregory', 'john', 
+names = ['Alice', 'bob', 'Charlie', 'dylan', 'Emma', 'Gregory', 'john',
          'kevin', 'Liam']
 
 names_cap = [name.capitalize() for name in names]
 names_is_cap = [name for name in names if name.capitalize() == name]
 names_dict = {key: random.randrange(100, 1000) for key in names_cap}
 mean = sum(names_dict.values())/len(names_dict)
-names_over_mean = {key:value for key, value in names_dict.items() if value > mean }
+names_over_mean = {key: value for key, value in names_dict.items()
+                   if value > mean}
 
 if __name__ == "__main__":
 
