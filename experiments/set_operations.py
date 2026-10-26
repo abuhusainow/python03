@@ -1,3 +1,6 @@
+# mypy: ignore-errors
+# flake8: noqa
+
 set1 = set(range(0,5))
 set2 = set(range(1,6))
 set3 = set(range(2,7))

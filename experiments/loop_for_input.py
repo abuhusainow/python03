@@ -1,3 +1,6 @@
+# mypy: ignore-errors
+# flake8: noqa
+
 import math
 
 

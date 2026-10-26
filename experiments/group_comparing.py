@@ -1,3 +1,6 @@
+# mypy: ignore-errors
+# flake8: noqa
+
 # Generic example using a dictionary of sets
 all_players = {
     "P1": {"a", "b", "c"},

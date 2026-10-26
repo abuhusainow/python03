@@ -1,3 +1,6 @@
+# mypy: ignore-errors
+# flake8: noqa
+
 class Car:
     def __init__(self, brand, color):
         self.brand = brand
